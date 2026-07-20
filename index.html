@@ -80,6 +80,10 @@
   .bar-link:hover{color:var(--coral)}
   .bar-actions{display:flex;align-items:center;gap:1.1rem;margin-left:auto}
   @media(max-width:560px){.bar-actions{width:100%;justify-content:flex-end;margin-left:0}}
+  .intro-list{list-style:none;display:grid;gap:1rem;max-width:46rem;margin-top:0.4rem}
+  .intro-list li{display:flex;gap:0.85rem;align-items:baseline;font-size:1.08rem;color:var(--ink);line-height:1.45}
+  .intro-check{color:var(--coral);font-weight:600;flex:none;font-size:0.95rem}
+  @media(min-width:720px){.intro-list{grid-template-columns:1fr 1fr;gap:1.1rem 2.6rem}}
 
   .section{padding-block:clamp(3.75rem,9vh,7rem);background:var(--paper)}
   .section + .section{border-top:1px solid var(--line)}
@@ -279,7 +283,7 @@
   <div class="bar-inner">
     <span class="brand">Chris Bartik<b>.</b></span>
     <span class="bar-actions">
-      <a class="bar-link" href="/Chris-Bartik-Resume.pdf" download>Résumé</a>
+      <a class="bar-link" href="/Chris-Bartik-Resume.pdf" download>Download Résumé (PDF)</a>
       <a class="bar-link" href="https://click.instasitebuilder.com/widget/bookings/chris-bartik-personal-30min" target="_blank" rel="noopener">Get in touch</a>
     </span>
   </div>
@@ -317,7 +321,7 @@
       <div>
         <div class="eyebrow reveal"><span class="mono">The short version</span></div>
         <div class="measure">
-          <p class="lead reveal">I'm a growth and marketing executive with 30 years in B2B SaaS. I've led marketing in-house, run my own consulting practice, and built companies, building and mentoring teams and owning the numbers the whole way.</p>
+          <p class="lead reveal">I help B2B SaaS leadership teams build organizations that grow. Over the last 30 years I've led marketing, product, and go-to-market across startups and enterprise software. Today I'm focused on helping companies modernize how they build, operate, and scale, combining experienced leadership with AI-enabled teams.</p>
           <p class="reveal" style="margin-top:1.3rem">But here's what actually gets me out of bed right now.</p>
           <p class="reveal">For most of my career, the best ideas died in a queue. Swinging for the fences meant begging for developer time, design resources, and budget, and by the time anything shipped, it was already stale. I once spent months building an ROI calculator that was out of date the day it went live. The real constraint was never imagination. It was the cost and time of building the thing.</p>
           <p class="reveal" style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--ink);font-weight:450;letter-spacing:-0.01em">That constraint is gone.</p>
@@ -556,6 +560,21 @@
 
 
 
+<!-- WHO I'D LIKE TO MEET -->
+<section class="section" id="intros">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="mono">Who I'd like to meet</span></div>
+    <h2 class="serif heading reveal">The best introductions for me right now.</h2>
+    <p class="reveal" style="max-width:40rem;margin-top:1.2rem;margin-bottom:2rem">I'm actively looking for my next seat. If someone in your world fits one of these, a warm intro would mean a lot, and I'm glad to be a resource in return.</p>
+    <ul class="intro-list reveal">
+      <li><span class="intro-check">✓</span><span>Founder-led B2B SaaS companies ($2M&ndash;$50M ARR)</span></li>
+      <li><span class="intro-check">✓</span><span>Teams looking for a fractional CMO or growth executive</span></li>
+      <li><span class="intro-check">✓</span><span>CEOs modernizing marketing and GTM with AI</span></li>
+      <li><span class="intro-check">✓</span><span>Investors who need an operating advisor</span></li>
+    </ul>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section contact" id="contact">
   <div class="wrap">
@@ -564,7 +583,7 @@
     <div class="contact-meta reveal">
       <a href="mailto:chris@chrisbartik.com">Email Me</a>
       <a href="https://www.linkedin.com/in/christopherbartik" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="/Chris-Bartik-Resume.pdf" download>Résumé (PDF)</a>
+      <a href="/Chris-Bartik-Resume.pdf" download>Download Résumé (PDF)</a>
     </div>
   </div>
 </section>
