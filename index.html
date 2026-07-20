@@ -72,12 +72,14 @@
   .bar-inner{
     max-width:var(--container);margin:0 auto;
     padding:1rem clamp(1.25rem,5vw,3rem);
-    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem 1rem;
   }
   .brand{font-family:'JetBrains Mono',monospace;font-size:0.82rem;font-weight:500;letter-spacing:0.02em;color:var(--ink);text-transform:none}
   .brand b{color:var(--coral)}
   .bar-link{font-family:'JetBrains Mono',monospace;font-size:0.76rem;letter-spacing:0.04em;color:var(--ink);border-bottom:1px solid var(--coral);padding-bottom:2px;transition:color .2s}
   .bar-link:hover{color:var(--coral)}
+  .bar-actions{display:flex;align-items:center;gap:1.1rem;margin-left:auto}
+  @media(max-width:560px){.bar-actions{width:100%;justify-content:flex-end;margin-left:0}}
 
   .section{padding-block:clamp(3.75rem,9vh,7rem);background:var(--paper)}
   .section + .section{border-top:1px solid var(--line)}
@@ -276,7 +278,10 @@
 <header class="bar" id="bar">
   <div class="bar-inner">
     <span class="brand">Chris Bartik<b>.</b></span>
-    <a class="bar-link" href="https://click.instasitebuilder.com/widget/bookings/chris-bartik-personal-30min" target="_blank" rel="noopener">Get in touch</a>
+    <span class="bar-actions">
+      <a class="bar-link" href="/Chris-Bartik-Resume.pdf" download>Résumé</a>
+      <a class="bar-link" href="https://click.instasitebuilder.com/widget/bookings/chris-bartik-personal-30min" target="_blank" rel="noopener">Get in touch</a>
+    </span>
   </div>
 </header>
 
@@ -559,6 +564,7 @@
     <div class="contact-meta reveal">
       <a href="mailto:chris@chrisbartik.com">Email Me</a>
       <a href="https://www.linkedin.com/in/christopherbartik" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/Chris-Bartik-Resume.pdf" download>Résumé (PDF)</a>
     </div>
   </div>
 </section>
