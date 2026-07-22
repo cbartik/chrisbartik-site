@@ -644,6 +644,52 @@
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
   }
 </script>
+<!-- Vercel Web Analytics: queue stub must be defined before the insights script -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
+
+<!-- Custom events (Pro allows 2 data properties per event) -->
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var source = params.get('utm_source') || params.get('src') || 'direct';
+
+  function locationOf(el) {
+    if (el.closest('header')) return 'header';
+    if (el.closest('.hero')) return 'hero';
+    if (el.closest('#contact')) return 'contact';
+    if (el.closest('footer')) return 'footer';
+    return 'body';
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!t || typeof t.closest !== 'function') return;
+    var a = t.closest('a');
+    if (!a) return;
+
+    var href = a.getAttribute('href') || '';
+    var where = locationOf(a);
+
+    if (href.indexOf('Chris-Bartik-Resume.pdf') > -1) {
+      window.va('event', { name: 'Resume Download', data: { location: where, source: source } });
+    } else if (href.indexOf('click.instasitebuilder.com') > -1) {
+      window.va('event', { name: 'Book Call', data: { location: where, source: source } });
+    } else if (href.indexOf('linkedin.com') > -1) {
+      window.va('event', { name: 'Outbound Click', data: { target: 'linkedin', location: where } });
+    } else if (href.indexOf('github.com') > -1) {
+      window.va('event', { name: 'Outbound Click', data: { target: 'github', location: where } });
+    } else if (href.indexOf('mailto:') === 0) {
+      window.va('event', { name: 'Outbound Click', data: { target: 'email', location: where } });
+    } else if (/^https?:/i.test(href)) {
+      var host = href;
+      try { host = new URL(href).hostname.replace(/^www\./, ''); } catch (err) {}
+      window.va('event', { name: 'Outbound Click', data: { target: host, location: where } });
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
